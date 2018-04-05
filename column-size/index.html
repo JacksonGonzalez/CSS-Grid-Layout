@@ -31,6 +31,16 @@
             grid-column-start: 1;
             grid-column-end: 3;
         }
+
+        .item:nth-of-type(7){
+            grid-column: 2 / 4;
+        }
+
+        .item:nth-of-type(8){
+            grid-column: 1 / -1;  /*con span define el nume de espacios ej: span 2*/
+            /*Se coloca el -1 cuando se quiere tomar todo el anocho y no se sabe donde termina*/
+        }
+
         
     </style>
 </head>
