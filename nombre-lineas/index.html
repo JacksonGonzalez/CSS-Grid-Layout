@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tamaño de item en filas de Grid</title>
+    <title>Nombras los column de Grid</title>
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
@@ -14,8 +14,8 @@
         .container{
             display: grid;
             /* grid-template: 20% 60% 20% / 30% 70%; */
-            grid-template-columns: repeat(7, 1fr);
-            grid-template-rows: repeat(2, 200px);
+            grid-template-columns: [inicio] 1fr [linea2] 1fr [linea3] 1fr [destacado-end] 1fr [linea5] 1fr [destacado-end2] 1fr [linea7] 1fr [final];
+            grid-template-rows: [inicio] 200px [fila2] 200px [final];
             grid-gap: 5px;
             height: 100vh;
             
@@ -30,17 +30,20 @@
             /* background: blue;
             grid-column-start: 1;
             grid-column-end: 3; */
-            grid-column: 1 /  span 3;
-            grid-row: 1 / span 2;
+            /* grid-column: 1 /  span 3;
+            grid-row: 1 / span 2; */
+            grid-column: inicio / destacado-end;
+            grid-row: inicio / final;
         }
 
         .item:nth-of-type(2){
-            grid-column: 4 / span 2;
-            grid-row: 1 / span 2;
+            /* grid-column: 4 / span 2;*/
+            grid-row: inicio / final; 
+            grid-column: destacado-end / destacado-end2;
         }
 
         .item:nth-of-type(3){
-            grid-column: 6 / span 2;  
+            grid-column: destacado-end2 / final;  
         }
 
         
