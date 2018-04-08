@@ -95,6 +95,12 @@
         .description{
             grid-area: description;
         }
+        @media screen and (max-width: 859px){
+            .hero-container{
+                grid-template-columns: 70px 1fr;
+                grid-template-areas: "badge title" "description description" "form form" "countdown countdown";
+            }
+        }
     </style>
 </head>
 <body>
