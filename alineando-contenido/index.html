@@ -15,11 +15,13 @@
             display: grid;
             grid-gap: 5px;
             height: 100vh;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-            justify-items: center; /* para alineación horizontal */
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(4, 100px);
+            /*justify-items: center; /* para alineación horizontal 
             align-items: center;  /*Para alineacion vertical*/
-            
+            /* justify-content: center start end stretch space-around space-between space-evenly */
+            justify-content: center;
+            align-content: center;
         }
         .item{
             background: lightblue;
@@ -29,8 +31,8 @@
         
         .item:nth-of-type(5){
             /* Para asignar la alineación de un solo elemento podemos usar: */
-            align-self: start;
-            justify-self: start;
+            /* align-self: start;
+            justify-self: start; */
         }
     </style>
 </head>
