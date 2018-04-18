@@ -5,26 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reto 1 Movie.es</title>
+    <style>
+        body{
+            margin: 0;
+            display: grid;
+            /* grid-template:20% 80% / 10% 90%; */
+            /* grid-template: 20% 80% / 30% 70%; */
+            grid-template-columns: 6% 1fr;
+            grid-template-rows: 50px 1fr;
+            grid-template-areas: "header header"
+                                "menu contenido";
+            height: 100vh;
+        }
+
+        .header{
+            grid-area: header;
+            background: green;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .menu{
+            grid-area: menu;
+            background: red;
+        }
+        .contenido{
+            grid-area: contenido;
+            background: grey;
+        }
+        .user{
+            display: inline-block;
+            /* display: flex; */
+        }
+        .username{
+            /* justify-content: center;
+            align-items: center; */
+        }
+
+        .logo{
+            /* justify-content: center;
+            align-items: center; */
+        }
+
+        .form{
+            /* justify-content: center;
+            align-items: center; */
+        }
+    </style>
 </head>
 <body>
-    <div class="contenedor">
 
         <header class="header">
-            <figure>
+            <figure class="logo">
                 <img src="" alt="Logo">
             </figure>
-            <form action="">
+            <form action="" class="form">
                 <input type="text" >
             </form>
             <div class="user">
-                <p>name</p>
-                <img src="" alt="avatar">
-                <span>=</span>
+                <p class="username">
+                    name
+                    <img src="" alt="avatar">
+                    <span>=</span>
+                </p>
             </div>
         </header>
-
-        <section>
-            <nav>
+ 
+            <nav class="menu">
                 <div>
                     <img src="" alt="home">
                     <a href="">Home</a>
@@ -42,11 +89,44 @@
                     <a href="">Ajustes</a>
                 </div>
             </nav>
-            <article>
-                <h3>Titulo</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque voluptatum amet incidunt tempore quos ex nulla culpa id accusantium provident dolor dignissimos, inventore, a fugiat illo ducimus temporibus sit.</p>
-            </article>
-        </section>
-    </div>
+            <section class="contenido">
+                <article>
+                    <h3>Titulo</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                </article>
+                <article>
+                    <h3>Titulo</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                </article>
+                <article>
+                    <h3>Titulo</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                </article>
+                <article>
+                    <h3>Titulo</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                </article>
+                <article>
+                    <h3>Titulo</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                </article>
+                <article>
+                    <h3>Titulo</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                </article>
+                <article>
+                    <h3>Titulo</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                </article>
+                <article>
+                    <h3>Titulo</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                </article>
+                <article>
+                    <h3>Titulo</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                </article>
+            </section>
+    
 </body>
 </html>
