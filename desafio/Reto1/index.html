@@ -16,6 +16,7 @@
             grid-template-areas: "header header"
                                 "menu contenido";
             height: 100vh;
+            weight: 100vw;
         }
 
         .header{
@@ -26,19 +27,30 @@
             align-items: center;
         }
         .menu{
+            display: grid;
             grid-area: menu;
+            height: 100%;
             background: red;
+            grid-template: 10% 10% 10% 70% / 1fr;
+            grid-template-areas:    "home"
+                                    "trending"
+                                    "likes"
+                                    "ajustes";
         }
         .contenido{
+            height: 100%;
+        }
+        .contenido-article{
             grid-area: contenido;
-            background: grey;
             display: grid;
-            grid-gap: 30px;
-            height: 100vh;
-            grid-template-columns: repeat(3, 30%);
-            grid-template-rows: repeat(3, 30%);
-            justify-items: center; /* para alineación horizontal */
+            grid-gap: 10px;
+            /* margin: 50px; */
+            height: 90%;
+            grid-template-columns: repeat(3, 31%);
+            grid-template-rows: repeat(3, 31%);
+            justify-content: center; /* para alineación horizontal */
             align-items: center;  /*Para alineacion vertical*/
+            text-align: center
             
         }
         .user{
@@ -59,6 +71,28 @@
             /* justify-content: center;
             align-items: center; */
         }
+
+        .home{
+            grid-area: home;
+        }
+        .trending{
+            grid-area: trending;
+        }
+        .likes{
+            grid-area: likes;
+        }
+        .ajustes{
+            grid-area: ajustes;
+            display: flex;
+            align-items: flex-end;
+        }
+        article{
+
+            background: gray;
+            height: 100%;
+            width: 100%;
+        }
+        
     </style>
 </head>
 <body>
@@ -80,61 +114,64 @@
         </header>
  
             <nav class="menu">
-                <div>
+                <div class="home">
                     <img src="" alt="home">
                     <a href="">Home</a>
                 </div>
-                <div>
+                <div class="trending">
                     <img src="" alt="trending">
                     <a href="">Trending</a>
                 </div>
-                <div>
+                <div class="likes">
                     <img src="" alt="likes">
                     <a href="">Mas likes</a>
                 </div>
-                <div>
+                <div class="ajustes">
                     <img src="" alt="ajustes">
                     <a href="">Ajustes</a>
                 </div>
             </nav>
 
             <section class="contenido">
-                <article>
-                    <h3>Titulo</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
-                </article>
-                <article>
-                    <h3>Titulo</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
-                </article>
-                <article>
-                    <h3>Titulo</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
-                </article>
-                <article>
-                    <h3>Titulo</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
-                </article>
-                <article>
-                    <h3>Titulo</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
-                </article>
-                <article>
-                    <h3>Titulo</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
-                </article>
-                <article>
-                    <h3>Titulo</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
-                </article>
-                <article>
-                    <h3>Titulo</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
-                </article>
-                <article>
-                    <h3>Titulo</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
-                </article>
+                <h1 class="titulo-cine">Ahora en el cine</h1>
+                <div class="contenido-article">
+                    <article>
+                        <h3>Titulo</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                    </article>
+                    <article>
+                        <h3>Titulo</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                    </article>
+                    <article>
+                        <h3>Titulo</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                    </article>
+                    <article>
+                        <h3>Titulo</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                    </article>
+                    <article>
+                        <h3>Titulo</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                    </article>
+                    <article>
+                        <h3>Titulo</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                    </article>
+                    <article>
+                        <h3>Titulo</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                    </article>
+                    <article>
+                        <h3>Titulo</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                    </article>
+                    <article>
+                        <h3>Titulo</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet atque</p>
+                    </article>
+                </div>
             </section>
     
 </body>
