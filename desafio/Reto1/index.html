@@ -11,7 +11,7 @@
             display: grid;
             /* grid-template:20% 80% / 10% 90%; */
             /* grid-template: 20% 80% / 30% 70%; */
-            grid-template-columns: 6% 1fr;
+            grid-template-columns: 8% 1fr;
             grid-template-rows: 50px 1fr;
             grid-template-areas: "header header"
                                 "menu contenido";
@@ -32,6 +32,14 @@
         .contenido{
             grid-area: contenido;
             background: grey;
+            display: grid;
+            grid-gap: 30px;
+            height: 100vh;
+            grid-template-columns: repeat(3, 30%);
+            grid-template-rows: repeat(3, 30%);
+            justify-items: center; /* para alineación horizontal */
+            align-items: center;  /*Para alineacion vertical*/
+            
         }
         .user{
             display: inline-block;
@@ -89,6 +97,7 @@
                     <a href="">Ajustes</a>
                 </div>
             </nav>
+
             <section class="contenido">
                 <article>
                     <h3>Titulo</h3>
